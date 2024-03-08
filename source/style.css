@@ -1,0 +1,134 @@
+
+:root{
+    --dark-blue-color: #1f2531;
+    --light-blue-color: #313a49;
+    --green-color: #53ffab;
+    --grey-color: #cee1e8;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "Lato", sans-serif;
+    background: var(--dark-blue-color);
+}
+
+header {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+h1{
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--grey-color);
+    line-height: 1;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    padding: 0 1rem;
+}
+
+article {
+    width: 34.375rem;
+    background: var(--light-blue-color);
+    border-radius: 1rem;
+    padding: 3rem 2rem 0 2rem;
+    text-align: center;
+}
+
+article span {
+    color: var(--green-color);
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.125rem;
+    font-weight: 700;
+}
+
+.advice--copy, .advice--copy span {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--grey-color);
+    margin-top: 2rem;
+}
+
+.advice--divider {
+    position: relative;
+    margin-top: 1.5rem;
+}
+
+.advice--divider::after {
+    content: "";
+    position: absolute;
+    width: calc(50% - 1.8rem);
+    height: 1px;
+    background: var(--grey-color);
+    left: 0;
+    top: 14px;
+    z-index: 999;
+    opacity: 0.75;
+}
+
+.advice--divider::before {
+    content: "";
+    position: absolute;
+    width: calc(50% - 1.8rem);
+    height: 1px;
+    background: var(--grey-color);
+    right: 0;
+    top: 14px;
+    z-index: 999;
+    opacity: 0.75;
+}
+
+.advice--divider img {
+    width: 2rem;
+    height: 2rem;
+    object-fit: cover;
+}
+
+.advice--reload {
+    margin-top: 3rem;
+    margin-bottom: -2.5rem;
+}
+
+.advice--reload img {
+    width: 3rem;
+    height: 3rem;
+    padding: 1rem;
+    background-color: var(--green-color);
+    border-radius: 50%;
+}
+
+/* Mobile */
+
+@media (max-width:500px) {
+    header {
+        padding: 1.5rem 0 0 0;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    article {
+        width: 100%;
+        padding-left: 1.125rem;
+        padding-right: 1.125rem;
+    }
+
+    article span {
+        font-size: 1rem;
+        font-weight: 600;
+        letter-spacing: .25rem;
+    }
+}
